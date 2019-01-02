@@ -1,0 +1,148 @@
+.page-header__top-wrapper,
+.page-header__middle-wrapper {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.page-header__top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 9px;
+}
+
+.page-header__middle-wrapper {
+  padding-top: 17px;
+}
+
+.page-header__top {
+  border-bottom: 1px solid #D4E4EF;
+}
+
+.header__top-info {
+  margin: 0;
+  font-size: 13px;
+}
+
+.header__top-info span {
+  font-weight: 500;
+}
+
+.page-header__middle-info {
+  position: relative;
+  display: flex;
+}
+
+.page-header__repair {
+  display: flex;
+  justify-content: space-between;
+  width: 515px;
+  margin-top: 21px;
+}
+
+.page-header__repair-mobile {
+  margin-right: 79px;
+}
+
+.page-header__repair-button {
+  position: relative;
+  .button-reset;
+  font-weight: 700;
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    right: -30px;
+    bottom: -14px;
+    height: 4px;
+    background-color: #27ACE2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: -23px;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 11px 8.5px 0 8.5px;
+    border-color: #27ACE2 transparent transparent transparent;
+  }
+}
+
+.page-header__repair-button--active {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    right: -30px;
+    bottom: -14px;
+    height: 4px;
+    background-color: #27ACE2;
+  }
+}
+
+.page-header__repair-window {
+  display: none;
+  position: absolute;
+  top: 57px;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.page-header__repair-window--show {
+  display: block;
+}
+
+.page-header__repair-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    padding: 27px 0 0;
+}
+
+.page-header__repair-item {
+  display: flex;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  width: 251px;
+  margin-right: 28px;
+  border-bottom: 1px solid #D4E4EF;
+}
+
+.page-header__repair-item:nth-child(4n + 4) {
+  margin-right: 0;
+}
+
+.page-header__repair-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.page-header__repair-image img {
+  min-width: auto;
+}
+
+.page-header__repair-name {
+  align-self: center;
+  margin: 0;
+  font-size: 14px;
+}

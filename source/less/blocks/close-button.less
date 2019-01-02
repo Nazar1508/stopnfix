@@ -1,0 +1,25 @@
+.close-button {
+  .button-reset;
+  position: absolute;
+  right: 3px;
+  top: 14px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9.5px;
+    left: 0;
+    width: 22px;
+    height: 3px;
+    transform: rotate(45deg);
+    background-color: #3D3D3D;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
