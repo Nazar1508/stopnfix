@@ -10,9 +10,13 @@
   <link rel="preload" href="fonts/roboto-v18-latin_cyrillic-ext-500.woff2" as="font" crossorigin>
   <link rel="stylesheet" href="libr/normalize-css/normalize-min.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="libr/swiper/css/swiper.min.css">
   <title>StopNFix</title>
 </head>
 <body>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="page-header">
     <div class="page-header__top">
       <div class="page-header__top-wrapper">
@@ -309,7 +313,160 @@
         <button class="device-form__button">Найти</button>
       </div>
     </form>
+    <div class="slider">
+      <div class="slider__wrapper">
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slider__content">
+                <h2 class="slider__title">
+                  Ремонт телефонов любой сложности
+                </h2>
+                <p class="slider__text">
+                  Ваш любимый гаджет сломался? Вернем его к жизни в кротчайшие сроки и по доступной цене!
+                </p>
+                <button class="slider__button site-button" type="button">
+                  Записаться на ремонт
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider__content">
+                <h2 class="slider__title">
+                  Ремонт телефонов любой сложности
+                </h2>
+                <p class="slider__text">
+                  Ваш любимый гаджет сломался? Вернем его к жизни в кротчайшие сроки и по доступной цене!
+                </p>
+                <button class="slider__button sign-up-button" type="button">
+                  Записаться на ремонт
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider__content">
+                <h2 class="slider__title">
+                  Ремонт телефонов любой сложности
+                </h2>
+                <p class="slider__text">
+                  Ваш любимый гаджет сломался? Вернем его к жизни в кротчайшие сроки и по доступной цене!
+                </p>
+                <button class="slider__button sign-up-button" type="button">
+                  Записаться на ремонт
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
   </header>
+  <main>
+    <section class="repair-steps">
+      <div class="repair-steps__wrapper">
+        <h1 class="repair-steps__title">
+          Ремонт вашего гаджета всего за 3 шага
+        </h1>
+        <ul class="repair-steps__list">
+          <li class="repair-steps__item repair-steps__item--left">
+            <span class="repair-steps__number">1</span>
+            <img class="repair-steps__image" src="img/hacked-device.png" width="152" height="152" alt="Сломанный девайс">
+            <p class="repair-steps__text repair-steps__text--1">
+              Укaжитe уcтpoйcтвo, кoтopoe нужнo&nbsp;oтpeмoнтиpoвaть
+            </p>
+          </li>
+          <li class="repair-steps__item repair-steps__item--center">
+            <span class="repair-steps__number">2</span>
+            <img class="repair-steps__image" src="img/pointer.png" width="143" height="144" alt="Записаться на ремонт">
+            <p class="repair-steps__text">
+              Запишитесь на ремонт в StоpNFix в&nbsp;удобное для вас время, мастер&nbsp;будет&nbsp;вас ждать
+            </p>
+          </li>
+          <li class="repair-steps__item">
+            <span class="repair-steps__number">3</span>
+            <img class="repair-steps__image" src="img/repaired-device.png" width="143" height="143" alt="Отремонтированный девайс">
+            <p class="repair-steps__text">
+              После определения причины поломки,&nbsp;гаджет будет в&nbsp;кротчайшие&nbsp;сроки отремонтирован
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="advantages__wrapper">
+        <h2 class="advantages__title">
+          Haши пpeимущecтвa
+        </h2>
+        <p class="advantages__sub-title">
+          Сотни клиентов ежедневно выбирают StоpNFix
+        </p>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <div class="advantages__image-block">
+              <svg class="advantages__image" width="85" height="84">
+                <use xlink:href="#icon-advantages-1"></use>
+              </svg>
+            </div>
+            <p class="advantages__description">
+              Гибкие цены и&nbsp;бесплатная&nbsp;диагностика
+            </p>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__image-block">
+              <svg class="advantages__image" width="86" height="84">
+                <use xlink:href="#icon-advantages-2"></use>
+              </svg>
+            </div>
+            <p class="advantages__description">
+              Целый склад запасных частей в наличии
+            </p>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__image-block">
+              <svg class="advantages__image" width="86" height="84">
+                <use xlink:href="#icon-advantages-3"></use>
+              </svg>
+            </div>
+            <p class="advantages__description">
+              Самый быстрый ремонт&nbsp;в&nbsp;Киеве
+            </p>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__image-block">
+              <svg class="advantages__image" width="86" height="84">
+                <use xlink:href="#icon-advantages-4"></use>
+              </svg>
+            </div>
+            <p class="advantages__description">
+              Даем гарантию на свою&nbsp;работу
+            </p>
+          </li>
+        </ul>
+        <div class="advantages__buttons">
+          <button class="advantages__button site-button site-button--small" type="button">
+            Записаться на ремонт
+          </button>
+          <button class="advantages__button site-button site-button--small site-button--cost" type="button">
+            Узнать стоимость
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Swiper JS -->
+  <script src="libr/swiper/js/swiper.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
   <script src="js/repair-devices.js"></script>
   <script src="js/search-form.js"></script>
 </body>
