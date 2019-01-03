@@ -7,7 +7,6 @@
   <link rel="shortcut icon" href="img/icon/favicon.ico" type="image/x-icon">
   <link rel="preload" href="fonts/roboto-v18-latin_cyrillic-ext-regular.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/roboto-condensed-v16-latin_cyrillic-ext-700.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/roboto-v18-latin_cyrillic-ext-500.woff2" as="font" crossorigin>
   <link rel="stylesheet" href="libr/normalize-css/normalize-min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="libr/swiper/css/swiper.min.css">
@@ -260,7 +259,7 @@
         </div>
       </div>
     </div>
-    <form class="device-form" action="#" method="GET">
+    <form class="device-form" action="#" method="GET" id="site-top">
       <div class="device-form__wrapper">
         <div class="device-form__select">
           <label class="device-form__label" for="form__title-1"></label>
@@ -449,13 +448,56 @@
           <button class="advantages__button site-button site-button--small" type="button">
             Записаться на ремонт
           </button>
-          <button class="advantages__button site-button site-button--small site-button--cost" type="button">
+          <a class="advantages__link site-button site-button--small site-button--cost" href="#site-top">
             Узнать стоимость
-          </button>
+          </a>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Окно с предложением отправить контактные данные -->
+  <div class="contacts-form">
+    <div class="contacts-form__wrapper">
+      <form class="contacts-form__form" action="#" method="POST">
+        <button class="contacts-form__close close-button close-button--form" type="button" aria-label="Закрить форму"></button>
+        <div class="contacts-form__top">
+          <h2 class="contacts-form__title">
+            Введите Ваши контактные данные
+          </h2>
+        </div>
+        <div class="contacts-form-bottom">
+          <p class="contacts-form__field">
+            <label class="contacts-form__label" for="user-name">Ваше имя*</label>
+            <input class="contacts-form__input" type="text" name="user-name" id="user-name" placeholder="Ваше имя" required>
+          </p>
+          <p class="contacts-form__field">
+            <label class="contacts-form__label" for="user-phone">Ваш телефон: *</label>
+            <input class="contacts-form__input" type="tel" name="user-phone" id="user-phone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="(0__) ___ - __ - __" required>
+          </p>
+          <button class="contacts-form__button site-button site-button--form" type="submit">
+            Записаться на ремонт
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Окно благодарности за заявку -->
+  <div class="thank-window">
+    <div class="thank-window__wrapper">
+      <h2 class="thank-window__title">
+        Спасибо!
+      </h2>
+      <p class="thank-window__text">
+        Мастер свяжется с Вами в самое ближайшее время.
+      </p>
+      <button class="thank-window__button site-button site-button--thank">
+        ОК
+      </button>
+    </div>
+  </div>
   <!-- Swiper JS -->
   <script src="libr/swiper/js/swiper.min.js"></script>
   <!-- Initialize Swiper -->
@@ -467,7 +509,6 @@
       },
     });
   </script>
-  <script src="js/repair-devices.js"></script>
-  <script src="js/search-form.js"></script>
+  <script src="js/main-script.js"></script>
 </body>
 </html>
