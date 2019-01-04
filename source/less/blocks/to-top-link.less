@@ -1,0 +1,42 @@
+.to-top-link {
+  position: fixed;
+  right: 70px;
+  bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(28, 35, 49, 0.05);
+  border-radius: 50%;
+
+  &:hover {
+    background-color: rgba(28, 35, 49, 0.1);
+  }
+}
+
+.to-top-link__arrow {
+  position: relative;
+  display: block;
+  width: 2px;
+  height: 15px;
+  background-color: rgb(176, 178, 184);
+  border-radius: 15px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2.9px;
+    left: 0;
+    width: 8px;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: rgb(176, 178, 184);
+  }
+
+  &::after {
+    left: -6px;
+    transform: rotate(-45deg);
+  }
+}

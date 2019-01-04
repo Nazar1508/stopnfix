@@ -136,4 +136,24 @@
     devicesList.classList.add("device-form__list--show");
     deviceLabel.classList.add("device-form__label--active");
   });
+
+  // ----------
+  // Валидация формы
+  var userName = document.getElementById("user-name");
+  var userPhone = document.getElementById("user-phone");
+
+  var formValidation = function (element) {
+    if (element.validity.valueMissing) {
+      element.classList.add("contacts-form__input--invalid");
+    }
+  };
+
+  userName.addEventListener("invalid", function () {
+    formValidation(userName);
+  });
+
+  userPhone.addEventListener("invalid", function () {
+    formValidation(userPhone);
+  });
+
 }());

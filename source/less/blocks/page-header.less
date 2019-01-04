@@ -54,22 +54,11 @@
   text-transform: uppercase;
   cursor: pointer;
 
-  &:hover::before {
-    content: "";
-    position: absolute;
-    left: -12px;
-    right: -30px;
-    bottom: -14px;
-    height: 4px;
-    background-color: #27ACE2;
-  }
-
   &::after {
     content: "";
     position: absolute;
     top: 6px;
     right: -23px;
-
     width: 0;
     height: 0;
     border-style: solid;
@@ -78,24 +67,21 @@
   }
 }
 
-.page-header__repair-button--active {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: -12px;
-    right: -30px;
-    bottom: -14px;
-    height: 4px;
-    background-color: #27ACE2;
-  }
+.page-header__repair-button:hover::before,
+.page-header__repair-button--active::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  right: -30px;
+  bottom: -14px;
+  height: 4px;
+  background-color: #27ACE2;
 }
 
 .page-header__repair-window {
   display: none;
   position: absolute;
-  top: 57px;
+  top: 62px;
   left: 0;
   z-index: 3;
   width: 100%;
@@ -150,4 +136,8 @@
 .page-header__repair-close {
   top: 14px;
   left: 1085px;
+}
+
+.page-header__contacts {
+  margin-left: auto;
 }
