@@ -616,3 +616,11 @@ button.swiper-pagination-bullet {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px;
 }
+
+@media (max-width: 1200px) {
+  .swiper-pagination-bullets {
+  bottom: 18px;
+  right: 64px;
+  width: 108px;
+  }
+}

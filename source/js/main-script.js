@@ -58,8 +58,7 @@
     }
   });
 
-  // ----------
-  // Блокируем кнопку поиска при пустых полях
+  // ---------- Блокируем кнопку поиска при пустых полях
   var searchButton = document.querySelector(".device-form__button");
   searchButton.disabled = true;
 
@@ -96,8 +95,7 @@
     }
   });
 
-  // ----------
-  // Открываем окно с предложением отправить контактные данные
+  // ---------- Открываем окно с предложением отправить контактные данные
   var pageBody = document.querySelector("body");
   var contactForm = pageBody.querySelector(".contacts-form");
   var closeButton = pageBody.querySelector(".contacts-form__close");
@@ -126,8 +124,7 @@
     }
   });
 
-  // ----------
-  // После нажатия на "Узнать стоимость" страница переносит вверх , открывается выпадающий список выбора устройства
+  // ---------- После нажатия на "Узнать стоимость" страница переносит вверх , открывается выпадающий список выбора устройства
   var advantagesLink = document.querySelector(".advantages__link ");
   var devicesList = document.querySelector(".device-form__list");
   var deviceLabel = document.querySelector(".device-form__label");
@@ -137,8 +134,7 @@
     deviceLabel.classList.add("device-form__label--active");
   });
 
-  // ----------
-  // Валидация формы
+  // ---------- Валидация формы
   var userName = document.getElementById("user-name");
   var userPhone = document.getElementById("user-phone");
 
@@ -154,6 +150,41 @@
 
   userPhone.addEventListener("invalid", function () {
     formValidation(userPhone);
+  });
+
+  // ---------- Открытие меню в мобильной версии по клику
+  var navList = document.querySelector(".main-nav__list");
+  var openNavButtton = document.querySelector(".main-nav__button--open");
+  var closeNavButton = document.querySelector(".main-nav__button--close");
+
+  openNavButtton.addEventListener("click", function () {
+    navList.classList.remove("main-nav__list--hidden");
+    openNavButtton.classList.add("main-nav__button--hidden");
+    closeNavButton.classList.add("main-nav__button--show");
+  });
+
+  closeNavButton.addEventListener("click", function () {
+    navList.classList.add("main-nav__list--hidden");
+    openNavButtton.classList.remove("main-nav__button--hidden");
+    closeNavButton.classList.remove("main-nav__button--show");
+  });
+
+  // ---------- Открытие контактов в планшетной и мобильной версии по клику
+  var contactsOpenButton = document.querySelector(".page-header__contacts-button");
+  var contactsBlock = document.querySelector(".page-header__contacts");
+
+  contactsOpenButton.addEventListener("click", function () {
+    contactsBlock.classList.toggle("page-header__contacts--show");
+  });
+
+  // ---------- Открываем окно поиска устройства на мобильном
+  var searchDeviceButton = document.querySelector(".device-form__open");
+  var deviceForm = document.querySelector(".page-header__device-form");
+  var deviceContainer = document.querySelector(".device-form__item-container");
+
+  searchDeviceButton.addEventListener("click", function () {
+    deviceForm.classList.add("page-header__device-form--popup");
+    deviceContainer.classList.add("device-form__item-container--show");
   });
 
 }());

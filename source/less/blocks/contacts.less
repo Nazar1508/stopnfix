@@ -30,6 +30,7 @@
 }
 
 .contacts__link {
+  display: block;
   margin-bottom: 3px;
   font-size: 17px;
   color: #00254A;
@@ -62,5 +63,45 @@
     top: 3px;
     left: 5px;
     background-image: url("../img/icon/mobile-blue-icon.svg");
+  }
+}
+
+@media (max-width: 1200px) {
+  .contacts {
+    width: 280px;
+    padding: 20px 27px 16px 58px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 4px;
+
+    &::before {
+      left: 35px;
+      top: 23px;
+    }
+
+    &::after {
+      top: 21px;
+      right: 27px;
+    }
+  }
+
+  .contacts__link {
+    display: block;
+    margin-bottom: 9px;
+  }
+
+  .contacts--footer {
+    padding-left: 20px;
+    padding-top: 0px;
+
+    &::before {
+      left: 5px;
+      top: 3px;
+    }
+
+    &::after {
+      top: 1px;
+      right: 68px;
+    }
   }
 }

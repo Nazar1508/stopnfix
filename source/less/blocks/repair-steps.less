@@ -85,3 +85,44 @@
 .repair-steps__text--1 {
   margin-top: 12px;
 }
+
+@media (max-width: 1200px) {
+  .repair-steps__wrapper {
+    width: 660px;
+  }
+
+  .repair-steps__title {
+    padding: 0 80px;
+    text-align: center;
+    line-height: normal;
+  }
+
+  .repair-steps__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .repair-steps__item--center {
+    margin: 0;
+  }
+
+  .repair-steps__item {
+    margin-bottom: 85px;
+  }
+
+  .repair-steps__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .repair-steps__item--left::before,
+  .repair-steps__item--center::before {
+    top: 225px;
+    left: 31px;
+    transform: rotate(89deg);
+    background: url(../img/icon/double-arrow.svg) 70px 0px no-repeat,
+  }
+
+  .repair-steps__item--center::before {
+    top: 250px;
+  }
+}

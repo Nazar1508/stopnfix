@@ -1,3 +1,118 @@
 .main-nav__list {
   .list-reset;
 }
+
+.main-nav__button {
+  .button-reset;
+  position: relative;
+  z-index: 2;
+  display: none;
+  width: 30px;
+  height: 22px;
+}
+
+.main-nav__button::before,
+.main-nav__button--close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 20px;
+  height: 2px;
+  background-color: #374561;
+  box-shadow:
+    0 -4px 0 0 #374561,
+    0 4px 0 0 #374561;
+}
+
+.main-nav__button--close::before {
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+
+.main-nav__button--close::after {
+  transform: rotate(-45deg);
+  box-shadow: none;
+}
+
+
+@media (max-width: 1200px) {
+  .main-nav {
+    margin-top: 10px;
+  }
+
+  .main-nav__button--open,
+  .main-nav__button--close {
+    position: absolute;
+    top: 40px;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 660px;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-nav__list {
+    position: absolute;
+    top: 0;
+    z-index: 4;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    padding-top: 88px;
+    padding-bottom: 32px;
+    background-color: #ffffff;
+    border-radius: 4px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #27ACE2;
+    }
+  }
+
+  .main-nav__button--open {
+    display: block;
+  }
+
+  .main-nav__button--show {
+    display: block;
+  }
+
+  .main-nav__button--hidden,
+  .main-nav__list--hidden {
+    display: none;
+  }
+
+  .main-nav__button--close,
+  .main-nav__button--open {
+    top: 20px;
+    z-index: 5;
+  }
+
+  .main-nav__button--close::before,
+  .main-nav__button--close::after {
+    width: 23px;
+    height: 3px;
+    left: -35px;
+    background-color: #ffffff;
+  }
+
+  .main-nav__button--close {
+    margin-left: 41px;
+    font-family: "Roboto Condensed", serif;
+    font-weight: 700;
+    line-height: normal;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+}

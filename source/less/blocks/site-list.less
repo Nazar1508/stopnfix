@@ -42,3 +42,47 @@
 .site-list__item--5 {
   order: 5;
 }
+
+@media (max-width: 1200px) {
+  .site-list {
+    flex-direction: column;
+  }
+
+  .site-list--column {
+    align-items: flex-start;
+  }
+
+  .site-list__item--order:nth-child(1) {
+    order: 1;
+  }
+
+  .site-list__item--order:nth-child(2) {
+    order: 3;
+  }
+
+  .site-list__item--order:nth-child(3) {
+    order: 4;
+  }
+
+  .site-list__item--order:nth-child(4) {
+    order: 2;
+  }
+
+  .site-list__item--order:nth-child(5) {
+    order: 5;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-list__item {
+    margin-bottom: 23px;
+  }
+
+  .site-list__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .site-list__link {
+    font-size: 16px;
+  }
+}

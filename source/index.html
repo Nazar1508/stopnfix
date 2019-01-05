@@ -9,7 +9,7 @@
   <link rel="preload" href="fonts/roboto-condensed-v16-latin_cyrillic-ext-700.woff2" as="font" crossorigin>
   <link rel="stylesheet" href="libr/normalize-css/normalize-min.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="libr/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="libr/swiper/css/swiper.css">
   <title>StopNFix</title>
 </head>
 <body>
@@ -20,20 +20,22 @@
     <div class="page-header__top">
       <div class="page-header__top-wrapper">
         <nav class="main-nav">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
+          <button class="main-nav__button main-nav__button--open" aria-label="Открить меню"></button>
+          <button class="main-nav__button main-nav__button--close" aria-label="Закрить меню">ЗАКРЫТЬ</button>
+          <ul class="main-nav__list main-nav__list--hidden site-list">
+            <li class="site-list__item site-list__item--order">
               <a class="site-list__link" href="">О нас</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--order">
               <a class="site-list__link" href="">Отзывы</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--order">
               <a class="site-list__link" href="">Советы по ремонту</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--order">
               <a class="site-list__link" href="">Акции</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--order">
               <a class="site-list__link" href="">Контакты</a>
             </li>
           </ul>
@@ -46,9 +48,17 @@
     <div class="page-header__middle">
       <div class="page-header__middle-wrapper">
         <div class="page-header__middle-info">
+          <button class="page-header__contacts-button">
+            <svg width="13" height="22">
+              <use xlink:href="#icon-mobile-white"></use>
+            </svg>
+          </button>
           <div class="logo">
             <a class="logo__link">
-              <img class="logo__image" src="img/logo@2x.png" width="190" height="61" alt="Логотип">
+              <picture>
+                <source media="(max-width: 700px)" srcset="img/logo-mobile@1x.png 1x">
+                <img class="logo__image" src="img/logo@1x.png" alt="Логотип">
+              </picture>
             </a>
           </div>
           <div class="page-header__repair">
@@ -215,7 +225,7 @@
               </div>
             </div>
             <div class="page-header__repair-tablets">
-              <button class="page-header__repair-button" id="repair-button-2">
+              <button class="page-header__repair-button page-header__repair-button--tablet" id="repair-button-2">
                 Ремонт планшетов
               </button>
               <div class="page-header__repair-window" id="window-1">
@@ -250,69 +260,76 @@
             </div>
           </div>
           <div class="page-header__contacts contacts">
-            <a href="tel:+38(066)452-16-85" class="contacts__link">+38 (066) 452-16-85</a>
-            <a href="tel:+38(099)775-65-44" class="contacts__link">+38 (099) 775-65-44</a>
-            <button class="contacts__button">
-              Записаться на ремонт
-            </button>
+            <div class="page-header__contacts-container">
+              <a href="tel:+38(066)452-16-85" class="contacts__link">+38 (066) 452-16-85</a>
+              <a href="tel:+38(099)775-65-44" class="contacts__link">+38 (099) 775-65-44</a>
+              <button class="contacts__button">
+                Записаться на ремонт
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <form class="device-form" action="#" method="GET" id="site-top">
+    <form class="page-header__device-form device-form" action="#" method="GET" id="site-top">
       <div class="device-form__wrapper">
-        <div class="device-form__select">
-          <label class="device-form__label" for="form__title-1"></label>
-          <input class="device-form__input device-form__input--placeholder" id="form__title-1" value="Выберите устройство" readonly>
-          <ul class="device-form__list">
-            <li class="device-form__item">
-              Мобильный телефон
-            </li>
-            <li class="device-form__item">
-              Планшет
-            </li>
-          </ul>
+        <button class="device-form__open site-button site-button--search">
+          Найти свое устройство
+        </button>
+        <div class="device-form__item-container">
+          <div class="device-form__select">
+            <label class="device-form__label" for="form__title-1"></label>
+            <input class="device-form__input device-form__input--placeholder" id="form__title-1" value="Выберите устройство" readonly>
+            <ul class="device-form__list">
+              <li class="device-form__item">
+                Мобильный телефон
+              </li>
+              <li class="device-form__item">
+                Планшет
+              </li>
+            </ul>
+          </div>
+          <div class="device-form__select">
+            <label class="device-form__label" for="form__title-2"></label>
+            <input class="device-form__input device-form__input--placeholder" id="form__title-2" value="Выберите марку" readonly>
+            <ul class="device-form__list">
+              <li class="device-form__item">
+                iPhone
+              </li>
+              <li class="device-form__item">
+                iPhone
+              </li>
+              <li class="device-form__item">
+                iPhone
+              </li>
+              <li class="device-form__item">
+                iPhone
+              </li>
+              <li class="device-form__item">
+                iPhone
+              </li>
+              <li class="device-form__item">
+                iPhone
+              </li>
+            </ul>
+          </div>
+          <div class="device-form__select">
+            <label class="device-form__label" for="form__title-3"></label>
+            <input class="device-form__input device-form__input--placeholder" id="form__title-3" value="Выберите модель" readonly>
+            <ul class="device-form__list">
+              <li class="device-form__item">
+                6s
+              </li>
+              <li class="device-form__item">
+                7
+              </li>
+            </ul>
+          </div>
+          <button class="device-form__button">Найти</button>
         </div>
-        <div class="device-form__select">
-          <label class="device-form__label" for="form__title-2"></label>
-          <input class="device-form__input device-form__input--placeholder" id="form__title-2" value="Выберите марку" readonly>
-          <ul class="device-form__list">
-            <li class="device-form__item">
-              iPhone
-            </li>
-            <li class="device-form__item">
-              iPhone
-            </li>
-            <li class="device-form__item">
-              iPhone
-            </li>
-            <li class="device-form__item">
-              iPhone
-            </li>
-            <li class="device-form__item">
-              iPhone
-            </li>
-            <li class="device-form__item">
-              iPhone
-            </li>
-          </ul>
-        </div>
-        <div class="device-form__select">
-          <label class="device-form__label" for="form__title-3"></label>
-          <input class="device-form__input device-form__input--placeholder" id="form__title-3" value="Выберите модель" readonly>
-          <ul class="device-form__list">
-            <li class="device-form__item">
-              6s
-            </li>
-            <li class="device-form__item">
-              7
-            </li>
-          </ul>
-        </div>
-        <button class="device-form__button">Найти</button>
       </div>
     </form>
-    <div class="slider">
+    <div class="page-header__slider slider">
       <div class="slider__wrapper">
         <!-- Swiper -->
         <div class="swiper-container">
@@ -358,7 +375,7 @@
             </div>
           </div>
           <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
+          <div class="slider__pagination swiper-pagination"></div>
         </div>
       </div>
     </div>
@@ -463,7 +480,7 @@
         <ul class="info__list">
            <li class="info__item">
              <div class="info__photo">
-              <img class="info__img" src="img/info-image1@1x.jpg" width="352" height="205" alt="Ремонт телефона">
+              <img class="info__img" src="img/info-image1@1x.jpg" alt="Ремонт телефона">
              </div>
              <p class="info__text">
                Скидка на ремонт второго телефона -20%
@@ -471,7 +488,7 @@
            </li>
            <li class="info__item">
              <div class="info__photo">
-              <img class="info__img" src="img/info-image2@1x.jpg" width="352" height="205" alt="Ремонт телефона">
+              <img class="info__img" src="img/info-image2@1x.jpg" alt="Ремонт телефона">
              </div>
              <p class="info__text">
               Новогодняя акция на ремонт мобильных телефонов!
@@ -479,7 +496,7 @@
            </li>
            <li class="info__item">
              <div class="info__photo">
-              <img class="info__img" src="img/info-image3@1x.jpg" width="352" height="205" alt="Ремонт телефона">
+              <img class="info__img" src="img/info-image3@1x.jpg" alt="Ремонт телефона">
              </div>
              <p class="info__text info__text--small">
                Диагностика планшета в подарок!
