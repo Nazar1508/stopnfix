@@ -17,7 +17,6 @@
     url("../img/icon/triangle-blue-icon.png") 984px 115px no-repeat,
     url("../img/icon/dagger-icon.png") 971px 194px no-repeat,
     url("../img/slider-bg@1x.jpg") no-repeat;
-
 }
 
 .slider__title {
@@ -62,5 +61,53 @@
 
   .slider__text {
     width: 350px;
+  }
+}
+
+@media (max-width: 700px) {
+  .slider__wrapper {
+    width: 320px;
+  }
+
+  .slider__content {
+    width: 320px;
+    padding: 26px 20px 39px 20px;
+    box-sizing: border-box;
+    background:
+      url("../img/icon/shake-line-icon.png") 182px 109px no-repeat,
+      url("../img/icon/circle-small-icon.png") 205px 85px no-repeat,
+      url("../img/icon/triangle-red-icon.png") 199px 58px no-repeat,
+      url("../img/icon/cirсle-icon.png") 282px 42px no-repeat,
+      url("../img/icon/triangle-blue-icon.png") 299px 88px no-repeat,
+      url("../img/slider-bg-mobile@1x.jpg") no-repeat;
+      background-size: 30px 4px, 5px 5px, 8px 10px, 11px 11px, 10px 10px, cover;
+  }
+
+  .slider__title {
+    width: 165px;
+    font-size: 18px;
+    line-height: 19px;
+  }
+
+  .slider__text {
+    width: 185px;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  .slider__pagination {
+    right: 4px!important;
+    bottom: 76px!important;
+  }
+
+  .slider__button  {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .slider-buffer {
+    min-height: 74px;
   }
 }

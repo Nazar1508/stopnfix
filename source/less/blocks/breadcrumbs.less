@@ -1,0 +1,28 @@
+.breadcrumbs {
+  margin-top: 29px;
+}
+
+.breadcrumbs__wrapper {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.breadcrumbs__link {
+  font-size: 13px;
+  color: #00254A;
+  margin-right: 20px;
+}
+
+.breadcrumbs__link[href]:hover {
+  color: #27ACE2;
+}
+
+.breadcrumbs__link--main {
+  position: relative;
+
+  &::after {
+    content: "/";
+    position: absolute;
+    right: -15px;
+  }
+}

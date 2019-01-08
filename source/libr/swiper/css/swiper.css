@@ -617,10 +617,14 @@ button.swiper-pagination-bullet {
   -ms-perspective: 1200px;
 }
 
-@media (max-width: 1200px) {
-  .swiper-pagination-bullets {
-  bottom: 18px;
-  right: 64px;
-  width: 108px;
+@media (max-width: 700px) {
+  .swiper-pagination-bullet {
+    width: 19px;
+    height: 19px;
+    border: 6px solid #0060AA;
+  }
+
+  .swiper-pagination-bullet-active {
+    border-right-color: #27ACE2;
   }
 }

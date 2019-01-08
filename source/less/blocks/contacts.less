@@ -55,7 +55,6 @@
 }
 
 .contacts--footer {
-  font-family: "Roboto Slab", serif;
   font-size: 17px;
   background: none;
 
@@ -103,5 +102,27 @@
       top: 1px;
       right: 68px;
     }
+  }
+}
+
+@media (max-width: 700px) {
+  .contacts--footer {
+    width: 180px;
+    padding-left: 0;
+    padding-right: 0;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      right: 17px;
+      top: 0;
+    }
+  }
+
+  .contacts__link--small {
+    font-size: 14px;
+    margin-bottom: 2px;
   }
 }

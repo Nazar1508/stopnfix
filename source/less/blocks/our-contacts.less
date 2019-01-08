@@ -1,0 +1,134 @@
+.our-contacts {
+  padding-top: 22px;
+}
+
+.our-contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.our-contacts__info {
+  width: 477px;
+}
+
+.our-contacts__title {
+  margin: 0;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 36px;
+  color: #3D3D3D;
+}
+
+.our-contacts__list {
+  .list-reset;
+  margin-top: 31px;
+}
+
+.our-contacts__item {
+  position: relative;
+  width: 180px;
+  padding-left: 33px;
+  font-style: normal;
+  line-height: normal;
+  font-size: 17px;
+  color: #00254A;
+  margin-bottom: 24px;
+
+}
+
+.our-contacts__item:last-child {
+  margin-bottom: 0;
+}
+
+.our-contacts__item--graphic {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    background-image: url("../img/icon/contacts-icon.svg");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    z-index: 2;
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/icon/graphic-icon.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.our-contacts__link {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 700;
+  color: #00254A;
+  text-decoration: none;
+
+  &:hover {
+    color: #27ACE2;
+  }
+}
+
+.our-contacts__item--call,
+.our-contacts__item--email {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    background-image: url("../img/icon/call-icon.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.our-contacts__item--email::before {
+  background-image: url("../img/icon/mail-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.our-contacts__social {
+  .list-reset;
+  margin-top: 38px;
+  margin-left: -3px;
+}
+
+.our-contacts__address {
+  margin-top: 48px;
+}
+
+.our-contacts__sub-title {
+  margin: 0;
+  line-height: normal;
+  font-size: 30px;
+  color: #3D3D3D;
+}
+
+.our-contacts__address-text {
+  margin: 0;
+  margin-top: 17px;
+  line-height: 26px;
+  font-size: 16px;
+  color: #3D3D3D;
+}
+
+.our-contacts__photo {
+  margin-top: 36px;
+}
+
+.our-contacts__img {
+  min-width: auto;
+}

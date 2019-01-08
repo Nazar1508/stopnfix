@@ -46,7 +46,7 @@
     position: absolute;
     top: 3px;
     right: -280px;
-    z-index: 2;
+    z-index: 1;
     width: 9px;
     height: 9px;
     border: 1.5px solid #afb5c0;
@@ -64,7 +64,7 @@
 .device-form__list {
   .list-reset;
   position: absolute;
-  z-index: 4;
+  z-index: 2;
   display: none;
   width: 100%;
   max-height: 285px;
@@ -123,8 +123,18 @@
     transform: rotate(-45deg);
   }
 
+}
+
+.device-form__button--active {
+  color: #ffffff;
+  background-color: #27ace2;;
+
   &:hover {
-    background-color: #adcbe2;
+    background-color: #0060AA;
+  }
+
+  &::before {
+    border-color: #ffffff;
   }
 }
 
@@ -137,6 +147,11 @@
   .button-reset;
   display: none;
 }
+
+.device-form__close {
+  display: none;
+}
+
 
 @media (max-width: 1200px) {
   .device-form__wrapper {
@@ -164,14 +179,51 @@
 }
 
 @media (max-width: 700px) {
+  .device-form {
+    margin-top: 0;
+  }
+
   .device-form__wrapper {
+    position: relative;
     width: 280px;
     padding: 0;
     background-color: #ffffff;
   }
 
+  .device-form__close {
+    .button-reset;
+    position: absolute;
+    top: -41px;
+    right: 0;
+    display: none;
+    width: 30px;
+    height: 30px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 1px;
+      width: 28px;
+      height: 3px;
+      background-color: #27ACE2;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      box-shadow: none;
+    }
+  }
+
+  .device-form__close--show {
+    display: block;
+  }
   .device-form__item-container {
     display: none;
+    width: 100%;
+    background-color: aliceblue;
   }
 
   .device-form__item-container--show {
@@ -180,5 +232,37 @@
 
   .device-form__open {
     display: block;
+    margin: 0 auto;
+  }
+
+  .device-form__open--show {
+    display: none;
+  }
+
+  .device-form__select {
+    width: 280px;
+    margin-bottom: 14px;
+  }
+
+  .device-form__list--1 {
+    z-index: 6;
+  }
+
+  .device-form__list--2 {
+    z-index: 5;
+  }
+
+  .device-form__list--3 {
+    z-index: 4;
+  }
+
+  .device-form__label::after {
+    right: -261px;
+  }
+
+  .device-form__button {
+    margin-top: 24px;
+    margin-left: 77px;
+    padding: 10px;
   }
 }

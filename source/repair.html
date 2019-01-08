@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="img/icon/favicon.ico" type="image/x-icon">
+  <link rel="preload" href="fonts/roboto-v18-latin_cyrillic-ext-regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed-v16-latin_cyrillic-ext-700.woff2" as="font" crossorigin>
+  <link rel="stylesheet" href="libr/normalize-css/normalize-min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="libr/swiper/css/swiper.css">
+  <title>StopNFix</title>
+</head>
+<body>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <header class="page-header page-header--small" id="top-scroll">
+    <div class="page-header__banner"></div>
+    <div class="page-header__top">
+      <div class="page-header__top-wrapper">
+        <nav class="main-nav">
+          <button class="main-nav__button main-nav__button--open" aria-label="Открить меню"></button>
+          <button class="main-nav__button main-nav__button--close" aria-label="Закрить меню">ЗАКРЫТЬ</button>
+          <ul class="main-nav__list main-nav__list--hidden site-list">
+            <li class="site-list__item site-list__item--order">
+              <a class="site-list__link" href="">О нас</a>
+            </li>
+            <li class="site-list__item site-list__item--order">
+              <a class="site-list__link" href="">Отзывы</a>
+            </li>
+            <li class="site-list__item site-list__item--order">
+              <a class="site-list__link" href="">Советы по ремонту</a>
+            </li>
+            <li class="site-list__item site-list__item--order">
+              <a class="site-list__link" href="">Акции</a>
+            </li>
+            <li class="site-list__item site-list__item--order">
+              <a class="site-list__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="header__top-info">
+          г. Киев, ул. Ушинского,4 <span>ПН-ПТ с 10:00 до 20:00</span>
+        </p>
+      </div>
+    </div>
+    <div class="page-header__middle">
+      <div class="page-header__middle-wrapper">
+        <div class="page-header__middle-info">
+          <div class="page-header__button-block">
+            <button class="page-header__contacts-button">
+              <svg width="13" height="22">
+                <use xlink:href="#icon-mobile-white"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="logo">
+            <a class="logo__link" href="index.html">
+              <picture>
+                <source media="(max-width: 700px)" srcset="img/logo-mobile@1x.png 1x">
+                <img class="logo__image" src="img/logo@1x.png" alt="Логотип">
+              </picture>
+            </a>
+          </div>
+          <div class="page-header__repair">
+            <div class="page-header__repair-mobile">
+              <button class="page-header__repair-button" id="repair-button-1">
+                Ремонт мобильных телефонов
+              </button>
+              <div class="page-header__repair-window" id="window-2">
+                <div class="page-header__sub-container">
+                  <button class="page-header__repair-close close-button" aria-label="Закрить окно"></button>
+                </div>
+                <ul class="page-header__repair-list">
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/iphone.png" width="59" height="40" alt="iPhone">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт iPhone
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/htc.png" width="51" height="35" alt="HTC">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт HTC
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/samsung.png" width="51" height="35" alt="Samsung">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов Samsung Galaxy
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/nokia.png" width="51" height="35" alt="Nokia">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов Nokia
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/sony.png" width="51" height="35" alt="Sony">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов Sony
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/motorola.png" width="55" height="37" alt="Motorola">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов Motorola
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/lg.png" width="51" height="35" alt="Lg">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов LG
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/huawei.png" width="51" height="35" alt="Huawei">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов HUAWEI
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/bb.png" width="51" height="35" alt="Blackberry">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов Blackberry
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/vertu.png" width="51" height="35" alt="Vertu">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов Vertu
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/meizu.png" width="36" height="24" alt="Meizu">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов Meizu
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/zte.png" width="51" height="20" alt="ZTE">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов ZTE
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/lenovo.png" width="51" height="35" alt="Lenovo">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов Lenovo
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/asus.png" width="51" height="35" alt="Asus">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов Asus
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/oneplus.png" width="53" height="13" alt="OnePlus">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов OnePlus
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/google.png" width="45" height="18" alt="Google">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов Google
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/vivo.png" width="47" height="14" alt="Vivo">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов Vivo
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/xiaomi.png" width="51" height="35" alt="Xiaomi">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов Xiaomi
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="img/icon/acer.png" width="47" height="21" alt="Acer">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт телефонов Acer
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="page-header__repair-tablets">
+              <button class="page-header__repair-button page-header__repair-button--tablet" id="repair-button-2">
+                Ремонт планшетов
+              </button>
+              <div class="page-header__repair-window" id="window-1">
+                <div class="page-header__sub-container">
+                  <button class="page-header__repair-close close-button" aria-label="Закрить окно"></button>
+                </div>
+                <ul class="page-header__repair-list">
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="#" width="50" height="50" alt="iPad">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт iPad
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="#" width="50" height="50" alt="iPad">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт iPad
+                    </p>
+                  </li>
+                  <li class="page-header__repair-item">
+                    <div class="page-header__repair-image">
+                      <img src="#" width="50" height="50" alt="iPad">
+                    </div>
+                    <p class="page-header__repair-name">
+                      Ремонт iPad
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="page-header__contacts-block">
+            <div class="page-header__contacts contacts">
+              <div class="page-header__contacts-container">
+                <a href="tel:+38(066)452-16-85" class="contacts__link">+38 (066) 452-16-85</a>
+                <a href="tel:+38(099)775-65-44" class="contacts__link">+38 (099) 775-65-44</a>
+                <button class="contacts__button">
+                  Записаться на ремонт
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="breadcrumbs">
+      <div class="breadcrumbs__wrapper">
+        <a href="index.html" class="breadcrumbs__link breadcrumbs__link--main">Главная</a>
+        <a class="breadcrumbs__link">Ремонт телефонов Samsung</a>
+      </div>
+    </div>
+    <section class="model">
+      <div class="model__wrapper">
+        <h1 class="model__tittle">
+          Выберите модель устройства
+        </h1>
+        <ul class="model__list">
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A3 (A300H)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-node@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Ремонт Samsung Galaxy Note 9
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A3 2016 (A310)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A5 2016 (A510F)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3-17@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A3 2017 (A320F)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A3 (A300H)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A3 (A300H)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A3 (A300H)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A3 (A300H)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A3 (A300H)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A3 (A300H)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A3 (A300H)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A3 (A300H)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A3 (A300H)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+          <li class="model__item">
+            <div class="model__item-block">
+              <img class="model__image" src="img/sg-a3@1x.jpg" alt="Телефон">
+              <p class="model__name">
+                Samsung Galaxy A3 (A300H)
+              </p>
+              <a class="model__button site-button site-button--less">
+                Ремонтировать
+              </a>
+            </div>
+          </li>
+        </ul>
+        <a class="model__more-lik site-button site-button--more" href="@">Показать еще</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer-services__buttons">
+        <button class="footer-services__button site-button site-button--small" type="button">
+          Записаться на ремонт
+        </button>
+        <a href="#top-scroll" class="footer-services__link site-button site-button--small site-button--cost">
+          Найти свое устройство
+        </a>
+      </div>
+      <div class="footer__top">
+        <div class="footer__main-info">
+          <div class="logo">
+            <a class="logo__link" href="index.html">
+              <picture>
+                <source media="(max-width: 700px)" srcset="img/logo-mobile-small@2x.png 1x">
+                <img class="logo__image logo__image--footer" src="img/logo-small@2x.png" alt="Логотип">
+              </picture>
+            </a>
+          </div>
+          <div class="footer__contacts">
+            <a class="footer__contacts-email" href="mailto:info@stopnfix.com">
+              info@stopnfix.com
+            </a>
+            <p class="footer__contacts-address">
+              г. Киев, улица Ушинского, 4
+            </p>
+          </div>
+          <div class="footer__tel-contacts contacts contacts--footer">
+            <a href="tel:+38(066)452-16-85" class="contacts__link contacts__link--small">+38 (066) 452-16-85</a>
+            <a href="tel:+38(099)775-65-44" class="contacts__link contacts__link--small">+38 (099) 775-65-44</a>
+            <button class="contacts__button">
+              Заказать звонок с сайта
+            </button>
+          </div>
+        </div>
+        <div class="footer__list">
+          <h3 class="footer__list-title">
+            Информация
+          </h3>
+          <ul class="footer__site-list site-list site-list--column">
+            <li class="site-list__item site-list__item--column site-list__item--1">
+              <a class="site-list__link" href="">О компании</a>
+            </li>
+            <li class="site-list__item site-list__item--column site-list__item--2">
+              <a class="site-list__link" href="">Отзывы</a>
+            </li>
+            <li class="site-list__item site-list__item--column site-list__item--3">
+              <a class="site-list__link" href="">Советы по ремонту</a>
+            </li>
+            <li class="site-list__item site-list__item--column site-list__item--4">
+              <a class="site-list__link" href="">Акции</a>
+            </li>
+            <li class="site-list__item site-list__item--column site-list__item--5">
+              <a class="site-list__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__additional-info">
+          <h3 class="footer__additional-title">
+            Услуги
+          </h3>
+          <a class="footer__additional-services">
+            Ремонт мобильных телефонов
+          </a>
+          <a class="footer__additional-services">
+            Ремонт планшетов
+          </a>
+          <ul class="footer__social social">
+            <li class="social__item">
+              <a class="social__link" href="">
+                <svg class="social-icon" width="20" height="10" aria-label="Вконтакте">
+                  <use xlink:href="#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="">
+                <svg class="social-icon" width="20" height="14" aria-label="Tвіттер">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="">
+                <svg class="social-icon" width="25" height="21" aria-label="Инстаграм">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="">
+                <svg class="social-icon" width="11" height="18" aria-label="Фейсбук">
+                  <use xlink:href="#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p class="footer__copyright-text">
+          © Сервис по ремонту StopNFix 2018.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <a class="to-top-link to-top-link--hidden" href="#top-scroll" aria-label="Вверх">
+    <span class="to-top-link__arrow"></span>
+  </a>
+
+  <!-- Окно с предложением отправить контактные данные -->
+  <div class="contacts-form">
+    <div class="contacts-form__wrapper">
+      <form class="contacts-form__form" action="#" method="POST">
+        <button class="contacts-form__close close-button close-button--form" type="button" aria-label="Закрить форму"></button>
+        <div class="contacts-form__top">
+          <h2 class="contacts-form__title">
+            Введите Ваши контактные данные
+          </h2>
+        </div>
+        <div class="contacts-form-bottom">
+          <p class="contacts-form__field">
+            <label class="contacts-form__label" for="user-name">Ваше имя*</label>
+            <input class="contacts-form__input" type="text" name="user-name" id="user-name" placeholder="Ваше имя" required>
+          </p>
+          <p class="contacts-form__field">
+            <label class="contacts-form__label" for="phone">Ваш телефон: *</label>
+            <input class="contacts-form__input" type="tel" name="user-phone" id="phone" minlength="10" maxlength="13" placeholder="+38(0__) - ___ - __ - __" required>
+          </p>
+          <button class="contacts-form__button site-button site-button--form" type="submit">
+            Записаться на ремонт
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Окно благодарности за заявку -->
+  <div class="thank-window">
+    <div class="thank-window__wrapper">
+      <h2 class="thank-window__title">
+        Спасибо!
+      </h2>
+      <p class="thank-window__text">
+        Мастер свяжется с Вами в самое ближайшее время.
+      </p>
+      <button class="thank-window__button site-button site-button--thank">
+        ОК
+      </button>
+    </div>
+  </div>
+
+  <!-- jquery -->
+  <script src="libr/jquery/jquery-v3.3.1.min.js"></script>
+  <script src="libr/masked-input/jquery.maskedinput.min.js"></script>
+  <script>
+    jQuery(function($){
+    $("#phone").mask("+38(099) 999 99 99");
+  });
+  </script>
+
+  <!-- Swiper JS -->
+  <script src="libr/swiper/js/swiper.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
+  <!-- Скрипти для плавной прокрутки -->
+  <script src="libr/smoth-scroll/smooth-scroll.min.js"></script>
+  <script>
+  var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+
+  <script src="js/main-script.js"></script>
+</body>
+</html>
