@@ -1,5 +1,5 @@
 .call-form {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .call-form__wrapper {
@@ -13,23 +13,20 @@
   font-weight: bold;
   line-height: normal;
   font-size: 24px;
-  color: #3D3D3D;
+  color: #3d3d3d;
 }
 
 .call-form__field {
+  width: 390px;
   margin: 0;
+  margin-right: 27px;
+  box-sizing: border-box;
 }
 
 .call-form__bottom {
   display: flex;
   align-items: flex-end;
   margin-top: 14px;
-}
-
-.call-form__field {
-  width: 390px;
-  margin-right: 27px;
-  box-sizing: border-box;
 }
 
 .call-form__label {
@@ -54,4 +51,41 @@
 
 .call-form__button {
   .button-reset;
+}
+
+@media (max-width: 1200px) {
+  .call-form__wrapper {
+    width: 660px;
+  }
+
+  .call-form__field {
+    width: 250px;
+  }
+}
+
+@media (max-width: 700px) {
+  .call-form__wrapper {
+    width: 280px;
+  }
+
+  .call-form__bottom {
+    flex-direction: column;
+  }
+
+  .call-form__title {
+    margin: 0;
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .call-form__field {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 14px;
+  }
+
+  .call-form__button {
+    margin: 0 auto;
+    margin-top: 17px;
+  }
 }

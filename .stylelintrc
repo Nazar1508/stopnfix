@@ -1,5 +1,6 @@
 {
   "extends": "stylelint-config-htmlacademy",
+  "ignoreFiles": "source/less/fonts.less",
 
   "rules": {
     "declaration-no-important": true,

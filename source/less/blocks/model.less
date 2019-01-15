@@ -43,13 +43,12 @@
   width: 236px;
   padding-top: 30px;
   padding-bottom: 24px;
-  background-color: lightgreen;
-  background: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 4px;
 
   &:hover {
     z-index: 2;
-    box-shadow: 0px 0px 10px rgba(0, 37, 74, 0.2);
+    box-shadow: 0 0 10px rgba(0, 37, 74, 0.2);
   }
 }
 
@@ -65,7 +64,7 @@
   font-weight: bold;
   line-height: normal;
   font-size: 18px;
-  color: #3D3D3D;
+  color: #3d3d3d;
 }
 
 .model__button {
@@ -75,8 +74,7 @@
   text-align: center;
 }
 
-.model__item-block:hover
-.model__button {
+.model__item-block:hover .model__button {
   display: block;
 }
 
@@ -84,4 +82,38 @@
   .button-reset;
   margin: 0 auto;
   margin-top: 75px;
+}
+
+@media (max-width: 1200px) {
+  .model__wrapper {
+    width: 660px;
+  }
+
+  .model__item:nth-child(2n + 2) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .model__wrapper {
+    width: 280px;
+  }
+
+  .model__item,
+  .model__item-block {
+    width: 135px;
+  }
+
+  .model__item {
+    margin-right: 10px;
+  }
+
+  .model__name {
+    width: 135px;
+    font-size: 16px;
+  }
+
+  .model__more-button {
+    margin-top: 27px;
+  }
 }

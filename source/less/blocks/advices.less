@@ -24,7 +24,7 @@
   margin-bottom: 30px;
 }
 
-.advices__item--water{
+.advices__item--water {
   margin-bottom: 10px;
 }
 
@@ -45,10 +45,36 @@
 }
 
 .advices__text a {
-  color: #27ACE2;
+  color: #27ace2;
   text-decoration: none;
 
   &:hover {
-    color: #0060AA;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 1200px) {
+  .advices__wrapper {
+    width: 660px;
+  }
+}
+
+@media (max-width: 700px) {
+  .advices--hidden {
+    display: none;
+  }
+
+  .advices__wrapper {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .advices__title {
+    font-size: 21px;
+    line-height: normal;
+  }
+
+  .advices__item--hidden {
+    display: none;
   }
 }

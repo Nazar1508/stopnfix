@@ -12,13 +12,13 @@
   width: 20px;
   height: 20px;
   box-sizing: border-box;
-  border: 3px solid #3D3D3D;
+  border: 3px solid #3d3d3d;
   border-top: none;
   border-left: none;
   transform: rotate(-45deg);
 
   &:hover {
-    border-color: #27ACE2;
+    border-color: #27ace2;
   }
 }
 
@@ -39,15 +39,36 @@
   line-height: normal;
   font-size: 24px;
   text-decoration: none;
-  color: #3D3D3D;
+  color: #3d3d3d;
 }
 
 .pagination__link:hover,
 .pagination__link--active {
-  color: #27ACE2;
+  color: #27ace2;
 }
 
 .pagination__button--hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .pagination {
+    width: 280px;
+  }
+
+  .pagination__link {
+    font-size: 21px;
+    line-height: normal;
+  }
+
+  .pagination__list {
+    width: 244px;
+  }
+
+  .pagination__button {
+    width: 16px;
+    height: 16px;
+    margin-top: -3px;
+  }
 }

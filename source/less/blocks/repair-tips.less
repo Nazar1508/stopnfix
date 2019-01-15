@@ -12,7 +12,7 @@
   font-weight: bold;
   line-height: normal;
   font-size: 36px;
-  color: #3D3D3D;
+  color: #3d3d3d;
 }
 
 .repair-tips__list {
@@ -58,7 +58,7 @@
   font-weight: bold;
   line-height: normal;
   font-size: 24px;
-  color: #3D3D3D;
+  color: #3d3d3d;
 }
 
 .repair-tips__date {
@@ -66,7 +66,7 @@
   margin-top: 8px;
   line-height: 21px;
   font-size: 15px;
-  color: #84888B;
+  color: #84888b;
 }
 
 .repair-tips__text {
@@ -76,10 +76,10 @@
 }
 
 .repair-tips__link {
-  color: #3999E5;
+  color: #3999e5;
 
   &:hover {
-    color: #0060AA;
+    color: #0060aa;
   }
 }
 
@@ -87,4 +87,73 @@
   .button-reset;
   margin: 0 auto;
   margin-top: 56px;
+}
+
+.repair-tips__item a {
+  display: block;
+  text-decoration: none;
+}
+
+.repair-tips__item a:hover .repair-tips__sub-title {
+  color: #27ace2;
+}
+
+@media (max-width: 1200px) {
+  .repair-tips__wrapper {
+    width: 660px;
+  }
+
+  .repair-tips__item {
+    flex-direction: column;
+  }
+
+  .repair-tips__description {
+    align-self: flex-start;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .repair-tips__wrapper {
+    width: 280px;
+  }
+
+  .repair-tips__title {
+    font-size: 26px;
+    line-height: normal;
+  }
+
+  .repair-tips__list {
+    margin-top: 15px;
+  }
+
+  .repair-tips__item {
+    margin-bottom: 25px;
+  }
+
+  .repair-tips__image {
+    width: 280px;
+    height: 137px;
+  }
+
+  .repair-tips__img {
+    width: 280px;
+  }
+
+  .repair-tips__description {
+    width: 280px;
+  }
+
+  .repair-tips__sub-title {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .repair-tips__button {
+    margin-top: 33px;
+  }
+
+  .repair-tips__pagination {
+    margin-top: 35px;
+  }
 }
